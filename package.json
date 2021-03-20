@@ -1,0 +1,37 @@
+{
+  "name": "2600-stephen-asuncion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon run app.js",
+    "watch": "webpack --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "@babel/preset-react": "^7.12.13",
+    "axios": "^0.21.1",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.1.2",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-validator": "^6.10.0",
+    "mongoose": "^5.12.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "source-map-loader": "^2.0.1",
+    "style-loader": "^2.0.0",
+    "uuid": "^8.3.2",
+    "webpack": "^5.24.4",
+    "webpack-cli": "^4.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
