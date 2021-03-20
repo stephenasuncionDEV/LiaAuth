@@ -142,8 +142,11 @@ app.post('/api/private/newlicense/:project', (req, res) => {
 });
 
 app.post('/test', (req,res) => {
-    console.log("test");
-    res.send(req.ip)
+    var ip = req.headers['x-forwarded-for'] || 
+     req.connection.remoteAddress || 
+     req.socket.remoteAddress ||
+     (req.connection.socket ? req.connection.socket.remoteAddress : null);
+    res.send(ip)
 });
 
 // Check License

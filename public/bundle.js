@@ -10184,20 +10184,7 @@ var DashboardLicense = /*#__PURE__*/function (_React$Component) {
         className: "sub-heading"
       }, "License \uD83D\uDD11"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "dashboard-form"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Generate a license"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "dashboard-form"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("form", {
-        onSubmit: this.handleGenerateLicense
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, "Choose a project:", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("select", {
-        name: "project",
-        onChange: this.handleSelectProjectChange,
-        value: this.state.project
-      }, this.props.proj.map(function (img) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("option", {
-          key: img.name,
-          value: img.name
-        }, img.name);
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Current Licenses: "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Current Licenses: "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "data-container"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "data-second-container"
@@ -10214,7 +10201,20 @@ var DashboardLicense = /*#__PURE__*/function (_React$Component) {
         }, res.license), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
           className: "data-item"
         }, res.dateCreated.substring(0, 10)));
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Generate a license"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "dashboard-form"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("form", {
+        onSubmit: this.handleGenerateLicense
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, "Choose a project:", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("select", {
+        name: "project",
+        onChange: this.handleSelectProjectChange,
+        value: this.state.project
+      }, this.props.proj.map(function (img) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("option", {
+          key: img.name,
+          value: img.name
+        }, img.name);
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "error-container contain-width"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", null, this.state.status.map(function (s) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {

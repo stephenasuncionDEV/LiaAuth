@@ -74,6 +74,18 @@ class DashboardLicense extends React.Component {
             <h2 className="sub-heading">License 🔑</h2>
             <hr/>
             <div className="dashboard-form">
+                <p>Current Licenses: </p>
+                <div className="data-container">
+                    <div className="data-second-container">
+                        <p className="data-item pink">Licenses</p>
+                        <p className="data-item pink">Date Created</p>
+                    </div>
+                    {this.state.licenses.map(res=>
+                    <div className="data-second-container" key={res.license}>
+                        <p className="data-item">{res.license}</p>
+                        <p className="data-item">{res.dateCreated.substring(0, 10)}</p>
+                    </div>)}
+                </div>
                 <h3>Generate a license</h3>
                 <div className="dashboard-form">
                     <form onSubmit={this.handleGenerateLicense}>
@@ -83,18 +95,6 @@ class DashboardLicense extends React.Component {
                                 {this.props.proj.map(img=><option key={img.name} value={img.name}>{img.name}</option>)}
                             </select>
                         </label>
-                        <p>Current Licenses: </p>
-                        <div className="data-container">
-                            <div className="data-second-container">
-                                <p className="data-item pink">Licenses</p>
-                                <p className="data-item pink">Date Created</p>
-                            </div>
-                            {this.state.licenses.map(res=>
-                            <div className="data-second-container" key={res.license}>
-                                <p className="data-item">{res.license}</p>
-                                <p className="data-item">{res.dateCreated.substring(0, 10)}</p>
-                            </div>)}
-                        </div>
                         <div className="error-container contain-width">
                             <ul>{this.state.status.map(s=><li key={s}>{s}</li>)}</ul>
                         </div>
