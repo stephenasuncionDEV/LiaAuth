@@ -142,10 +142,7 @@ app.post('/api/private/newlicense/:project', (req, res) => {
 });
 
 app.post('/test', (req,res) => {
-    var ip = req.headers['x-forwarded-for'] || 
-     req.connection.remoteAddress || 
-     req.socket.remoteAddress ||
-     (req.connection.socket ? req.connection.socket.remoteAddress : null);
+    var ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
     res.send(ip)
 });
 
