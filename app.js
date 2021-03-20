@@ -199,7 +199,7 @@ app.get('*', (req, res) => {
 // Connection to database and express
 connection.once('open', ()=>{
     console.log('Connected to db');
-    const server = app.listen(8080, ()=>{
+    const server = app.listen(process.env.PORT || 8080, ()=>{
         console.log('Listening on port 8080');
     });
 });
