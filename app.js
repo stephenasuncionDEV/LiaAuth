@@ -101,9 +101,9 @@ app.post('/api/private/newproject', ProjectValidator, (req, res) => {
     })
     .then(projRes => {
         if (projRes != null) {
-            res.status(409).json({status:["Project already exists in your data"]});
+            throw new ErrorHandler(409, ["Project already exists in your data"]);
         } else {
-            let proj = new Project(req.body);
+            let proj = new Project({name: req.body.name, dateCreated: req.body.dateCreated});
             return proj.save();
         }
     })
@@ -114,7 +114,7 @@ app.post('/api/private/newproject', ProjectValidator, (req, res) => {
     .then(projOut => {
         res.status(200).json({status:["Project succesfully created"]});
     })
-    .catch(error=>res.status(422).json({status:["Failed to create project"]}));
+    .catch(error => res.status(error.status || 422).json({status: error.msg || "Failed to create project"}));
 });
 
 // Generate License

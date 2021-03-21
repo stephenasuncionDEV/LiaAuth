@@ -23,13 +23,6 @@ class App extends React.Component {
         this.setState({name: getCookie("name")});
     }
 
-    // componentDidUpdate(prevProps, prevState) {
-    //     if (prevState.page != this.state.page)
-    //     {
-            
-    //     }
-    // }
-
     handleSideBarToggle() {
         if (this.state.sidebar == false) {
             this.setState({sidebar: true});

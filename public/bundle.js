@@ -10003,12 +10003,7 @@ var App = /*#__PURE__*/function (_React$Component) {
       this.setState({
         name: (0,_cookie_js__WEBPACK_IMPORTED_MODULE_3__.getCookie)("name")
       });
-    } // componentDidUpdate(prevProps, prevState) {
-    //     if (prevState.page != this.state.page)
-    //     {
-    //     }
-    // }
-
+    }
   }, {
     key: "handleSideBarToggle",
     value: function handleSideBarToggle() {
