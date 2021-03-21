@@ -10188,7 +10188,11 @@ var DashboardLicense = /*#__PURE__*/function (_React$Component) {
         className: "data-item pink"
       }, "Licenses"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
         className: "data-item pink"
-      }, "Date Created")), this.state.licenses.map(function (res) {
+      }, "Date Created"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+        className: "data-item pink"
+      }, "IsUsed"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+        className: "data-item pink"
+      }, "UsedBy")), this.state.licenses.map(function (res) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
           className: "data-second-container",
           key: res.license
@@ -10196,7 +10200,11 @@ var DashboardLicense = /*#__PURE__*/function (_React$Component) {
           className: "data-item"
         }, res.license), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
           className: "data-item"
-        }, res.dateCreated.substring(0, 10)));
+        }, res.dateCreated.substring(0, 10)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+          className: "data-item"
+        }, res.isUsed == true ? "Used" : "Not Used"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+          className: "data-item"
+        }, res.usedBy == "::1" ? "localhost" : res.usedBy));
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Generate a license"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "dashboard-form"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("form", {

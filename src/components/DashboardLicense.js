@@ -80,11 +80,15 @@ class DashboardLicense extends React.Component {
                     <div className="data-second-container">
                         <p className="data-item pink">Licenses</p>
                         <p className="data-item pink">Date Created</p>
+                        <p className="data-item pink">IsUsed</p>
+                        <p className="data-item pink">UsedBy</p>
                     </div>
                     {this.state.licenses.map(res=>
                     <div className="data-second-container" key={res.license}>
                         <p className="data-item">{res.license}</p>
                         <p className="data-item">{res.dateCreated.substring(0, 10)}</p>
+                        <p className="data-item">{res.isUsed == true ? "Used" : "Not Used"}</p>
+                        <p className="data-item">{res.usedBy == "::1" ? "localhost" : res.usedBy}</p>
                     </div>)}
                 </div>
                 <h3>Generate a license</h3>
