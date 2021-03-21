@@ -35,9 +35,6 @@ body {
 
 .container {
     height: auto;
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
-    background-color: white;
-    border-radius: 5px 5px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1rem;
@@ -49,22 +46,24 @@ body {
 .logo-padding { padding: 2rem; }
 
 form { width: 100%; }
-form label { font-size: 10pt; }
+form label { font-size: 10pt; color: white; }
 
 form input {
     display: block;
-    border: 0;
+    border: 2px solid #313338;
     padding: .5rem;
     box-sizing: border-box;
     border-radius: 5px 5px;
-    background-color: #E8F0FE;
+    background-color: #1b1d22;
     margin-bottom: .5rem;
     width: 100%;
+    color:rgb(224, 32, 122);
 }
 
 form input[type=submit] {
     margin-bottom: 0;
     cursor: pointer;
+    color: rgb(0, 0, 0);
 }
 
 .form-button-container { transition: all .5s; }
@@ -77,6 +76,7 @@ form input[type=submit] {
 .form-heading {
     font-size: 14pt;
     margin: 0;
+    color: white;
 }
 
 .form-tagline {
@@ -91,6 +91,7 @@ form input[type=submit] {
     margin: 0;
     font-size: 10pt;
     text-align: center;
+    color: white;
 }
 
 #login-question span {
