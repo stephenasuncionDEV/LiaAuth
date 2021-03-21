@@ -78,17 +78,19 @@ class DashboardLicense extends React.Component {
                 <p>Current Licenses: </p>
                 <div className="data-container">
                     <div className="data-second-container">
-                        <p className="data-item pink">Licenses</p>
-                        <p className="data-item pink">Date Created</p>
-                        <p className="data-item pink">IsUsed</p>
-                        <p className="data-item pink">UsedBy</p>
+                        <p className="data-item date-item-grow pink">Licenses</p>
+                        <p className="data-item date-item-grow pink">Date Created</p>
+                        <p className="data-item date-item-grow pink">Date Last Use</p>
+                        <p className="data-item date-item-grow pink">IsUsed</p>
+                        <p className="data-item date-item-grow pink">UsedBy</p>
                     </div>
                     {this.state.licenses.map(res=>
                     <div className="data-second-container" key={res.license}>
-                        <p className="data-item">{res.license}</p>
-                        <p className="data-item">{res.dateCreated.substring(0, 10)}</p>
-                        <p className="data-item" style={{color: res.isUsed == true ? "red" : "lime"}}>{res.isUsed == true ? "Used" : "Not Used"}</p>
-                        <p className="data-item">{res.usedBy == "::1" ? "localhost" : res.usedBy}</p>
+                        <p className="data-item date-item-grow">{res.license}</p>
+                        <p className="data-item date-item-grow">{res.dateCreated.substring(0, 10)}</p>
+                        <p className="data-item date-item-grow">{res.dateLastUse.substring(0, 10)}</p>
+                        <p className="data-item date-item-grow" style={{color: res.isUsed == true ? "red" : "lime"}}>{res.isUsed == true ? "Used" : "Not Used"}</p>
+                        <p className="data-item date-item-grow">{res.usedBy == "::1" ? "localhost" : res.usedBy}</p>
                     </div>)}
                 </div>
                 <h3>Generate a license</h3>

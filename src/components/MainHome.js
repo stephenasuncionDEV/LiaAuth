@@ -14,7 +14,9 @@ class MainHome extends React.Component {
                 <button id="create-project-btn" onClick={()=>this.props.setPage(1)}>Create a Project</button>
                 <h2 className="padding-top">Recent Users :</h2>
                 <div className="data-container">
-                    <p>{this.props.users.slice(0, 5).map(user=>user.name + ", ")}</p>
+                    <div className="recent-user-container">
+                        {this.props.users.slice(0, 20).map(user=><p className="data-item pink">{user.name}</p>)}
+                    </div>
                 </div>
             </div>
         </>;

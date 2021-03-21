@@ -61,13 +61,13 @@ class DashboardProject extends React.Component {
                 <p>Current Projects: </p>
                 <div className="data-container">
                     <div className="data-second-container">
-                        <p className="data-item pink">Project Name</p>
-                        <p className="data-item pink">Date Created</p>
+                        <p className="data-item date-item-grow pink">Project Name</p>
+                        <p className="data-item date-item-grow pink">Date Created</p>
                     </div>
                     {this.props.proj.map(res=>
                     <div className="data-second-container" key={res.name}>
-                        <p className="data-item">{res.name}</p>
-                        <p className="data-item">{res.dateCreated.substring(0, 10)}</p>
+                        <p className="data-item date-item-grow">{res.name}</p>
+                        <p className="data-item date-item-grow">{res.dateCreated.substring(0, 10)}</p>
                     </div>)}
                 </div>
             </div>
