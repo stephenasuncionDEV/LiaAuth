@@ -88,7 +88,7 @@ class MainDocumentation extends React.Component {
                 </div>
                 <div className="reference-container">
                     <p>Linear Gradient</p>
-                    <p>File: src/style.css Line: 303</p>
+                    <p>File: src/style.css Line: 294</p>
                     <p>By <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient()" target="_blank">Mozilla's Documentation of Linear Gradient</a></p>
                 </div>
             </div>

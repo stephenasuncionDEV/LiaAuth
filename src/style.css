@@ -48,12 +48,11 @@ body {
 form { width: 100%; }
 form label { font-size: 10pt; color: white; }
 
-form input {
+.second-container form input {
     display: block;
     border: 2px solid #313338;
     padding: .5rem;
     box-sizing: border-box;
-    border-radius: 5px 5px;
     background-color: #1b1d22;
     margin-bottom: .5rem;
     width: 100%;
@@ -63,14 +62,12 @@ form input {
 form input[type=submit] {
     margin-bottom: 0;
     cursor: pointer;
-    color: rgb(0, 0, 0);
 }
 
 .form-button-container { transition: all .5s; }
 
 .form-button-container:hover {
-    transform: scale(1.05);
-    background-color: #e960a7;
+    border: 2px solid rgb(224, 32, 122);
 }
 
 .form-heading {
@@ -130,15 +127,6 @@ form input[type=submit] {
     height: 100%;
     width: 100%;
     transition: margin-left .5s;
-}
-
-#greetings {
-    color: rgb(224, 32, 122);
-    font-size: 10pt;
-    text-align: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    font-style: italic;
 }
 
 nav ul {
@@ -275,7 +263,9 @@ hr { opacity: 5%; }
 #create-project-btn {
     border: 0;
     padding: 1rem;
-    background-color: #4287b4;
+    background-color: #1b1d22;
+    color: white;
+    border: 2px solid rgb(224, 32, 122);;
     border-radius: .5rem;
     cursor: pointer;
     transition: all .5s;
@@ -283,7 +273,7 @@ hr { opacity: 5%; }
 
 #create-project-btn:hover {
     transform: scale(1.1);
-    background-color: #0f6caa;
+    background-color: #19232b;
 }
 
 .float-left { float:left; }
