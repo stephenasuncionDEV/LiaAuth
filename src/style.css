@@ -296,6 +296,7 @@ hr { opacity: 5%; }
     justify-content: space-evenly;
 }
 
+/* Linear Gradient https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient() */
 .statistics-container {
     width: 215px;
     height: 180px;

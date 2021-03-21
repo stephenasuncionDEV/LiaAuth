@@ -73,10 +73,9 @@ class MainDocumentation extends React.Component {
                     <a href="https://stackoverflow.com/questions/58475407/how-to-check-if-input-in-input-field-has-alphabets-only-in-express-validator" target="_blank">By Hlib Derbenov (StackOverFlow)</a>
                 </div>
                 <div className="reference-container">
-                    <p>Cookies (Server-Side and Client-Side)</p>
-                    <p>File: cookie.js</p>
-                    <p>By <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie" target="_blank">Mozilla's Documentation of Cookies</a></p>
-                    <p>Inspired From <a href="https://www.tutorialspoint.com/expressjs/expressjs_cookies.htm" target="_blank">Tutorialspoint</a></p>
+                    <p>Cookies (Modified the code to my own liking)</p>
+                    <p>File: cookie.js Line: 6, 10, 14</p>
+                    <p>By <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie#example_3_do_something_only_once" target="_blank">Mozilla's Documentation of Cookies</a></p>
                 </div>
                 <div className="reference-container">
                     <p>Hamburger Menu Image</p>
@@ -89,7 +88,7 @@ class MainDocumentation extends React.Component {
                 </div>
                 <div className="reference-container">
                     <p>Linear Gradient</p>
-                    <p>File: src/style.css Line: 14</p>
+                    <p>File: src/style.css Line: 303</p>
                     <p>By <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient()" target="_blank">Mozilla's Documentation of Linear Gradient</a></p>
                 </div>
             </div>
