@@ -60,7 +60,7 @@ class MainDocumentation extends React.Component {
                 <p>Sample Project</p>
                 <a href="https://www.mediafire.com/file/iwv69l7edax2zjg/LiaAuth_SampleProject.zip/file" target="_blank">Sample C++ Project</a>
 
-                <h2 id="thirdParty" className="sub-heading">References / Citations</h2>
+                <h2 id="references" className="sub-heading">References / Citations</h2>
                 <hr/>
                 <div className="reference-container">
                     <p>Logo/Icon</p>
