@@ -1,20 +1,25 @@
+/* 
+    LiaAuth 2021 Stephen Asuncion
+*/
 const express = require("express");
 const { v4: uuidv4 } = require('uuid');
 const app = express();
 
+// Database
 const connection = require('./db/connection');
 const { User } = require("./models/user");
 const { Project } = require("./models/project");
 const { License } = require("./models/license");
-const { cookieExists, getCookie, destroyCookie } = require('./src/servercookie');
 
 app.use(express.static('public'));
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 
+// Validators
 const { RegisterValidator, LoginValidator, ProjectValidator } = require('./validators');
 const { validationResult } = require('express-validator');
 
+// Error Handler
 function ErrorHandler(status, msg) {
     this.status = status;
     this.msg = msg;
@@ -58,7 +63,7 @@ app.post('/api/private/login', LoginValidator, (req, res) => {
         });
         return res.status(422).json({status:allError});
     }
-    // Get user's email (wait for this to finish)
+
     const user = User.findOne({'email':req.body.email})
     .then(result => {
         if (result == null) {
@@ -148,6 +153,8 @@ app.post('/api/public/checklicense/', (req, res) => {
     var todayDate = new Date().toISOString().slice(0,10);
   
     let foundLicense = false;
+
+    // Check if license is in the project requested
     Project.findOne({'name': req.body.project})
     .populate("licenses")
     .then(results => {
@@ -160,10 +167,10 @@ app.post('/api/public/checklicense/', (req, res) => {
             throw new ErrorHandler(404, "License not found on project");
         }
     })
-    .then(() => {
+    .then(() => { // Get the license
         return License.findOne({'license': req.body.license});
     })
-    .then(result => {
+    .then(result => { // Update database
         if (result.isUsed != true)
         {
             result.usedBy = ip;
@@ -174,7 +181,7 @@ app.post('/api/public/checklicense/', (req, res) => {
         }
         return result.save();
     })
-    .then(result => {
+    .then(result => { // Check if ip the requested is different (to limit access)
         if (result.usedBy != ip) {
             throw new ErrorHandler(403, "Key is already used by another user");
         } 

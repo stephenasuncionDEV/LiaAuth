@@ -444,6 +444,68 @@ hr {
     justify-content: flex-start;
 }
 
+.bold {
+    font-weight: bold;
+}
+
+.documentation-container ul {
+    padding: 1rem;
+    list-style-type: none;
+}
+
+.documentation-container li a {
+    padding-left: 1rem;
+    text-decoration: none;
+    color:#00a7e9;
+    background-color: #1A1A1D;
+}
+
+.indent {
+    padding-left: 2rem;
+}
+
+.documentation-container li a:hover {
+    border-left: 2px solid #00a7e9;
+}
+
+.documentation-container a {
+    text-decoration: none;
+    color:#00a7e9;
+    background-color: rgba(126, 126, 126, 0.2);
+    overflow-wrap: break-word;
+}
+
+.blue {
+    color:#0f6caa;
+}
+
+.sub-section {
+    border-left: 2px solid #00a7e9;
+    padding-left: 1rem;
+    margin-top: 3rem;
+}
+
+.requirement {
+    font-style: italic;
+    font-size: 9pt;
+    color:#e900c2;
+    background-color: rgba(126, 126, 126, 0.089);
+    padding-left: .25rem;
+    padding-right: .25rem;
+    margin-right: 1rem;
+}
+
+.reference-container {
+    padding: 1rem;
+    background-color: #111113;
+    margin-bottom: 1rem;
+}
+
+.reference-image {
+    width: 2rem;
+    height: 2rem;
+}
+
 @media screen and (min-width:650px) {
     #sidebar {
         max-width: 260px;

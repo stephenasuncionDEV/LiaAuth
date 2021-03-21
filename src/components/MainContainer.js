@@ -1,7 +1,8 @@
 import React from 'react';
+import axios from 'axios';
 import MainHome from './MainHome';
 import MainDashboard from './MainDashboard';
-import axios from 'axios';
+import MainDocumentation from './MainDocumentation';
 
 class MainContainer extends React.Component {
     constructor(props) {
@@ -19,7 +20,7 @@ class MainContainer extends React.Component {
     }
 
     render() {
-        const homeProps = {
+        const properties = {
             email: this.props.email,
             name: this.props.name,
             setPage: this.props.setPage,
@@ -34,10 +35,13 @@ class MainContainer extends React.Component {
                             <img src="images/menu.png" alt="menu toggle"/>
                         </div>
                         {this.props.page == 0 && (
-                            <MainHome {...homeProps}/>
+                            <MainHome {...properties}/>
                         )}
                         {this.props.page == 1 && (
-                            <MainDashboard {...homeProps}/>
+                            <MainDashboard {...properties}/>
+                        )}
+                        {this.props.page == 2 && (
+                            <MainDocumentation setPage={this.props.setPage}/>
                         )}
                     </div>
                 </div>

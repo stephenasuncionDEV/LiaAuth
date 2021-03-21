@@ -3,6 +3,7 @@ import axios from 'axios';
 
 class MainHome extends React.Component {
     render() {
+        let index = 0;
         return <>
             <div className="home-container">
                 <h1 className="main-heading">Welcome to LiaAuth ✋</h1>
@@ -15,7 +16,7 @@ class MainHome extends React.Component {
                 <h2 className="padding-top">Recent Users :</h2>
                 <div className="data-container">
                     <div className="recent-user-container">
-                        {this.props.users.slice(0, 20).map(user=><p className="data-item pink">{user.name}</p>)}
+                        {this.props.users.slice(0, 20).map(user=><p key={index++} className="data-item pink">{user.name}</p>)}
                     </div>
                 </div>
             </div>
