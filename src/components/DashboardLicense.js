@@ -49,11 +49,12 @@ class DashboardLicense extends React.Component {
     handleGenerateLicense(event) {
         event.preventDefault();
         var todayDate = new Date().toISOString().slice(0,10);
-        axios.post(`/api/private/newlicense/${this.state.project}`, {
+        axios.post("/api/private/newlicense", {
             name: this.state.project,
             email: this.props.email,
             dateCreated: todayDate,
-            dateLastUse: todayDate
+            dateLastUse: todayDate,
+            project: this.state.project
         })
         .then(res => {
             this.getLicense();

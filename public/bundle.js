@@ -10156,11 +10156,12 @@ var DashboardLicense = /*#__PURE__*/function (_React$Component) {
 
       event.preventDefault();
       var todayDate = new Date().toISOString().slice(0, 10);
-      axios__WEBPACK_IMPORTED_MODULE_1___default().post("/api/private/newlicense/".concat(this.state.project), {
+      axios__WEBPACK_IMPORTED_MODULE_1___default().post("/api/private/newlicense", {
         name: this.state.project,
         email: this.props.email,
         dateCreated: todayDate,
-        dateLastUse: todayDate
+        dateLastUse: todayDate,
+        project: this.state.project
       }).then(function (res) {
         _this3.getLicense();
 
@@ -10310,8 +10311,9 @@ var DashboardProject = /*#__PURE__*/function (_React$Component) {
 
       event.preventDefault();
       var todayDate = new Date().toISOString().slice(0, 10);
-      axios__WEBPACK_IMPORTED_MODULE_1___default().post("/api/private/newproject/".concat(this.props.email), {
+      axios__WEBPACK_IMPORTED_MODULE_1___default().post("/api/private/newproject", {
         name: this.state.projectInput,
+        email: this.props.email,
         dateCreated: todayDate
       }).then(function (res) {
         _this2.props.getProjectsByUser();

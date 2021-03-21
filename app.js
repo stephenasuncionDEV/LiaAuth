@@ -82,7 +82,7 @@ app.post('/api/private/login', LoginValidator, (req, res) => {
 });
 
 // New Project
-app.post('/api/private/newproject/:email', ProjectValidator, (req, res) => {
+app.post('/api/private/newproject', ProjectValidator, (req, res) => {
     const valError = (validationResult(req)).array();
     allError = [];
 
@@ -94,7 +94,7 @@ app.post('/api/private/newproject/:email', ProjectValidator, (req, res) => {
 
     // Create new project
     let user;
-    User.findOne({'email': req.params.email})
+    User.findOne({'email': req.body.email})
     .then(userRes => {
         user = userRes;
         return Project.findOne({'name':req.body.name});
@@ -118,14 +118,16 @@ app.post('/api/private/newproject/:email', ProjectValidator, (req, res) => {
 });
 
 // Generate License
-app.post('/api/private/newlicense/:project', (req, res) => {
+app.post('/api/private/newlicense/', (req, res) => {
     const guid = uuidv4();
     let proj;
-    Project.findOne({'name': req.params.project})
+    Project.findOne({'name': req.body.project})
     .then(projRes => {
         proj = projRes;
         let license = new License({
             license: guid,
+            isUsed: false,
+            usedBy: "",
             generatedBy: req.body.email,
             dateCreated: req.body.dateCreated, 
             dateLastUse: req.body.dateLastUse});
@@ -141,15 +143,47 @@ app.post('/api/private/newlicense/:project', (req, res) => {
     .catch(error=>res.status(422).json({status:["Failed to create project"]}));
 });
 
-// app.post('/test', (req,res) => {
-//     var ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
-//     res.send(ip)
-// });
-
 // Check License
 app.post('/api/public/checklicense/', (req, res) => {
     const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
-    res.send(`${req.body.project}  ${req.body.license}   ${ip}`);
+    var todayDate = new Date().toISOString().slice(0,10);
+
+    let foundLicense = false;
+    Project.findOne({'name': req.body.project})
+    .populate("licenses")
+    .then(results => {
+        results.licenses.forEach(val => {
+            if (val.license == req.body.license) {
+                foundLicense = true;
+            }
+        });
+        if (foundLicense == false) {
+            throw new ErrorHandler(404, "License not found on project");
+        }
+    })
+    .then(() => {
+        return License.findOne({'license': req.body.license});
+    })
+    .then(result => {
+        if (result.isUsed != true)
+        {
+            result.usedBy = ip;
+            result.dateLastUse = todayDate;
+            result.isUsed = true;
+        } else {
+            result.dateLastUse = todayDate;
+        }
+        return result.save();
+    })
+    .then(result => {
+        if (result.usedBy != ip) {
+            throw new ErrorHandler(403, "Key is already used by another user");
+        } 
+        else {
+            res.status(200).send({code: 200, msg: "License OK"});
+        }
+    })
+    .catch(error => res.status(error.status || 403).send({code: error.status || 403, msg: error.msg || "License Not Found"}));
 });
 
 // Get All Licenses of all projects
