@@ -16,7 +16,7 @@ class LoginForm extends React.Component {
                     </label>
                     <label>
                         Password:
-                        <input type='password' name="password" value={this.props.password} onChange={this.props.handlePassChange}/>
+                        <input type='password' name="password" autocomplete="on" value={this.props.password} onChange={this.props.handlePassChange}/>
                     </label>
                     <div className="error-container">
                         <ul className={statusStyle}>{this.props.status.map(s=><li key={s}>{s}</li>)}</ul>

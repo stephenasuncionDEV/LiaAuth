@@ -9,6 +9,7 @@ class Login extends React.Component {
         super(props);
 
         /*
+            Form
             0 = login
             1 = register
         */
