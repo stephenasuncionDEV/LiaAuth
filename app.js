@@ -141,15 +141,16 @@ app.post('/api/private/newlicense/:project', (req, res) => {
     .catch(error=>res.status(422).json({status:["Failed to create project"]}));
 });
 
-app.post('/test', (req,res) => {
-    var ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
-    res.send(ip)
-});
+// app.post('/test', (req,res) => {
+//     var ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+//     res.send(ip)
+// });
 
 // Check License
-// app.post('/api/public/checklicense/:project/:license', (req, res) => {
-
-// });
+app.post('/api/public/checklicense/', (req, res) => {
+    const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+    res.send(`${req.body.project}  ${req.body.license}   ${ip}`);
+});
 
 // Get All Licenses of all projects
 app.get('/api/private/licensecount/:email', (req, res) => {
