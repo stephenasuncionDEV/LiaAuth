@@ -85,7 +85,7 @@ app.post('/api/private/login', LoginValidator, (req, res) => {
     .catch(error => res.status(error.status).json({status: error.msg}));
 });
 
-// New Project
+// New Project Handler
 app.post('/api/private/newproject', ProjectValidator, (req, res) => {
     const valError = (validationResult(req)).array();
     allError = [];
@@ -121,8 +121,8 @@ app.post('/api/private/newproject', ProjectValidator, (req, res) => {
     .catch(error => res.status(error.status || 422).json({status: error.msg || "Failed to create project"}));
 });
 
-// Generate License
-app.post('/api/private/newlicense/', (req, res) => {
+// Generate License Handler
+app.post('/api/private/newlicense', (req, res) => {
     const guid = uuidv4();
     let proj;
     Project.findOne({'name': req.body.project})
@@ -148,7 +148,7 @@ app.post('/api/private/newlicense/', (req, res) => {
 });
 
 // Check License
-app.post('/api/public/checklicense/', (req, res) => {
+app.post('/api/public/checklicense', (req, res) => {
     const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
     var todayDate = new Date().toISOString().slice(0,10);
   
