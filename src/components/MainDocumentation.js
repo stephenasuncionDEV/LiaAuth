@@ -17,6 +17,9 @@ class MainDocumentation extends React.Component {
                     <li className="indent"><a href="#createProject">Creating a project</a></li>
                     <li className="indent"><a href="#generateLicense">Generating Licence</a></li>
                     <li><a href="#thirdParty">Connecting from 3rd party</a></li>
+                    <li className="indent"><a href="#requestData">Request Data</a></li>
+                    <li className="indent"><a href="#responses">Responses</a></li>
+                    <li className="indent"><a href="#sampleProject">Sample Project</a></li>
                     <li><a href="#references">References / Citations</a></li>
                 </ul>
                 <h2 id="gettingStarted" className="sub-heading">Getting Started</h2>
@@ -44,20 +47,20 @@ class MainDocumentation extends React.Component {
                 <hr/>
 
                 <p>Post Request to <a href="#" onClick={(e)=>{e.preventDefault();}}>https://liaauth.herokuapp.com/api/public/checklicense</a></p>
+                <p id="requestData" className="sub-section bold">Request Data</p>
                 <div className="diagaram">
-                    <p>Request Data</p>
                     <p className="blue">email: String</p>
                     <p className="blue">project: String</p>
                     <p className="blue">license: String</p>
                 </div>
+                <p id="responses" className="sub-section bold">Responses</p>
                 <div className="diagaram">
-                    <p>Response</p>
                     <p className="blue">404: "License not found on project"</p>
                     <p className="blue">403: "Key is already used by another user"</p>
                     <p className="blue">403: "Project not found"</p>
                     <p className="blue">200: "License OK"</p>
                 </div>
-                <p>Sample Project</p>
+                <p id="sampleProject" className="sub-section bold">Sample Project</p>
                 <a href="https://www.mediafire.com/file/iwv69l7edax2zjg/LiaAuth_SampleProject.zip/file" target="_blank">Sample C++ Project</a>
 
                 <h2 id="references" className="sub-heading">References / Citations</h2>
