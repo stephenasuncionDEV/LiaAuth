@@ -6,7 +6,6 @@ const connection = require('./db/connection');
 const { User } = require("./models/user");
 const { Project } = require("./models/project");
 const { License } = require("./models/license");
-const { Log } = require("./models/log");
 const { cookieExists, getCookie, destroyCookie } = require('./src/servercookie');
 
 app.use(express.static('public'));
@@ -94,7 +93,7 @@ app.post('/api/private/newproject', ProjectValidator, (req, res) => {
 
     // Create new project
     let user;
-    User.findOne({'email': req.body.email})
+    User.findOne({'email': req.body.email.replace(/%40/g, "@")})
     .then(userRes => {
         user = userRes;
         return Project.findOne({'name':req.body.name});
@@ -183,7 +182,7 @@ app.post('/api/public/checklicense/', (req, res) => {
             res.status(200).send({code: 200, msg: "License OK"});
         }
     })
-    .catch(error => res.status(error.status || 403).send({code: error.status || 403, msg: error.msg || "License Not Found"}));
+    .catch(error => res.status(error.status || 403).send({code: error.status || 403, msg: error.msg || "Project not found"}));
 });
 
 // Get All Licenses of all projects

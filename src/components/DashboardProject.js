@@ -25,8 +25,8 @@ class DashboardProject extends React.Component {
         event.preventDefault();
         var todayDate = new Date().toISOString().slice(0,10);
         axios.post("/api/private/newproject", {
-            name: this.state.projectInput,
             email: this.props.email,
+            name: this.state.projectInput,
             dateCreated: todayDate
         })
         .then(res => {

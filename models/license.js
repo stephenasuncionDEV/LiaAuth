@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const { LogSchema } = require("./log.js");
 
 let Schema = mongoose.Schema;
 
@@ -17,8 +16,7 @@ let LicenseSchema = new Schema({
         required: true
     },
     dateCreated: Date,
-    dateLastUse: Date,
-    logs: [LogSchema]
+    dateLastUse: Date
 });
 
 exports.License = mongoose.model('License', LicenseSchema);

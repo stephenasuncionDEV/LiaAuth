@@ -10307,8 +10307,8 @@ var DashboardProject = /*#__PURE__*/function (_React$Component) {
       event.preventDefault();
       var todayDate = new Date().toISOString().slice(0, 10);
       axios__WEBPACK_IMPORTED_MODULE_1___default().post("/api/private/newproject", {
-        name: this.state.projectInput,
         email: this.props.email,
+        name: this.state.projectInput,
         dateCreated: todayDate
       }).then(function (res) {
         _this2.props.getProjectsByUser();
