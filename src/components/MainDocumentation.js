@@ -73,7 +73,7 @@ class MainDocumentation extends React.Component {
                 <div className="reference-container">
                     <p>Validation Regex For Letters Only</p>
                     <p>File: validators.js Line: 14</p>
-                    <a href="https://stackoverflow.com/questions/58475407/how-to-check-if-input-in-input-field-has-alphabets-only-in-express-validator" target="_blank">By Hlib Derbenov (StackOverFlow)</a>
+                    <p>By <a href="https://stackoverflow.com/questions/58475407/how-to-check-if-input-in-input-field-has-alphabets-only-in-express-validator" target="_blank">Hlib Derbenov (StackOverFlow)</a></p>
                 </div>
                 <div className="reference-container">
                     <p>Cookies (Modified the code to my own liking)</p>
