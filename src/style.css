@@ -27,9 +27,13 @@ body {
 #logo-container img {
     float: left;
     width: 65px;
+    cursor: pointer; 
 }
 
-#logo-container h1 { margin-left: .5rem; }
+#logo-container h1 { 
+    margin-left: .5rem; 
+    cursor: pointer; 
+}
 
 .center { justify-content: center; }
 
