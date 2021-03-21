@@ -77,7 +77,6 @@ class MainDocumentation extends React.Component {
                     <p>File: cookie.js</p>
                     <p>By <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie" target="_blank">Mozilla's Documentation of Cookies</a></p>
                     <p>Inspired From <a href="https://www.tutorialspoint.com/expressjs/expressjs_cookies.htm" target="_blank">Tutorialspoint</a></p>
-                    <p>Inspired From <a href="https://www.thoughtco.com/using-cookies-with-php-2693786" target="_blank">Thoughtco</a></p>
                 </div>
                 <div className="reference-container">
                     <p>Hamburger Menu Image</p>
