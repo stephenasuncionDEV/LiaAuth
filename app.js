@@ -146,7 +146,7 @@ app.post('/api/private/newlicense/', (req, res) => {
 app.post('/api/public/checklicense/', (req, res) => {
     const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
     var todayDate = new Date().toISOString().slice(0,10);
-
+  
     let foundLicense = false;
     Project.findOne({'name': req.body.project})
     .populate("licenses")

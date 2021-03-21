@@ -10201,7 +10201,10 @@ var DashboardLicense = /*#__PURE__*/function (_React$Component) {
         }, res.license), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
           className: "data-item"
         }, res.dateCreated.substring(0, 10)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-          className: "data-item"
+          className: "data-item",
+          style: {
+            color: res.isUsed == true ? "red" : "lime"
+          }
         }, res.isUsed == true ? "Used" : "Not Used"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
           className: "data-item"
         }, res.usedBy == "::1" ? "localhost" : res.usedBy));
