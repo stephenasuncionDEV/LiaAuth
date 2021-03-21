@@ -57,6 +57,7 @@ class MainDocumentation extends React.Component {
                     <p className="blue">403: "Project not found"</p>
                     <p className="blue">200: "License OK"</p>
                 </div>
+                <p>Sample Project</p>
                 <a href="https://www.mediafire.com/file/iwv69l7edax2zjg/LiaAuth_SampleProject.zip/file" target="_blank">Sample C++ Project</a>
 
                 <h2 id="thirdParty" className="sub-heading">References / Citations</h2>

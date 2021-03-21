@@ -11439,7 +11439,7 @@ var MainDocumentation = /*#__PURE__*/function (_React$Component) {
         className: "blue"
       }, "403: \"Project not found\""), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
         className: "blue"
-      }, "200: \"License OK\"")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+      }, "200: \"License OK\"")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Sample Project"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
         href: "https://www.mediafire.com/file/iwv69l7edax2zjg/LiaAuth_SampleProject.zip/file",
         target: "_blank"
       }, "Sample C++ Project"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
