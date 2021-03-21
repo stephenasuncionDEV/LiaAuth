@@ -24,7 +24,7 @@ class MainDocumentation extends React.Component {
                 
                 <p id="howDoesItWork" className="sub-section bold">How does it work?</p>
                 <p>To start, things off you need to create an account. Once you log in you need to create a <a href="#" onClick={(e)=>{e.preventDefault(); this.props.setPage(1);}}>project</a>. Creating a project would make the <a href="#" onClick={(e)=>{e.preventDefault(); this.props.setPage(1);}}>license</a> section appear in which you can generate license according to the project selected.</p>
-                <p><span className="bold">LiaAuth</span> gets a request from your application. It checks if the license is in the project requested. If yes, it gets the license from the database and update it. It also checks whether the ip requested is different, to limit access of key to one user.</p>
+                <p><span className="bold">LiaAuth</span> gets a request from your application. It checks if the license is in the project requested. If yes, it gets the license from the database and update it. It also checks whether the ip requested is different to limit access of a key to one user.</p>
                 
                 <p id="registerLogin" className="sub-section bold">Register / Login</p>
                 <p>To register an account you need email, name, password, and password must match the confirm-password field.</p>
