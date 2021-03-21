@@ -220,7 +220,7 @@ app.get('/api/private/projects/:email', (req, res) => {
 // Get All Users
 app.get('/api/private/users', (req, res) => { 
     User.find({}).then(results => {
-        res.send(results);
+        res.json(results);
     })
     .catch(error=>res.status(422).send(error));
 });
