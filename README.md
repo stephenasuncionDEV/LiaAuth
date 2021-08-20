@@ -1,5 +1,10 @@
 # LiaAuth
 Simple Licensing API
+made for my full stack web development final project
+
+-Uses mongodb, react, express, more...
+
+## Usage
 
 Post Request to
 /api/public/checklicense
