@@ -6,20 +6,20 @@ made for my full stack web development final project
 
 ## Usage
 
-Post Request to
-/api/public/checklicense
+Post Request to<br />
+/api/public/checklicense<br />
 
-email: String
-project: String
-license: String
+email: String<br />
+project: String<br />
+license: String<br />
 
-Responses:
-404: "License not found on project"
-403: "Key is already used by another user"
-403: "Project not found"
-200: "License OK"
+Responses:<br />
+404: "License not found on project"<br />
+403: "Key is already used by another user"<br />
+403: "Project not found"<br />
+200: "License OK"<br />
 
-Sample Project
+Sample Project<br />
 https://www.mediafire.com/file/iwv69l7edax2zjg/LiaAuth_SampleProject.zip/file
 
 ## Preview
