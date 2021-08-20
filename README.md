@@ -1,5 +1,3 @@
-![image](https://user-images.githubusercontent.com/73958774/130163611-1b37facd-2c8f-429f-92ea-73b8f25db0cc.png)
-
 # LiaAuth
 Simple Licensing API
 made for my full stack web development final project
@@ -23,3 +21,5 @@ Responses:
 
 Sample Project
 https://www.mediafire.com/file/iwv69l7edax2zjg/LiaAuth_SampleProject.zip/file
+
+![image](https://user-images.githubusercontent.com/73958774/130163611-1b37facd-2c8f-429f-92ea-73b8f25db0cc.png)
