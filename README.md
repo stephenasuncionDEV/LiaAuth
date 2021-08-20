@@ -1,0 +1,2 @@
+# LiaAuth
+Simple Licensing API
