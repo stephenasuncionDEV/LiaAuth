@@ -27,11 +27,11 @@ Sample Project (C++): [https://www.mediafire.com/file/iwv69l7edax2zjg/LiaAuth_Sa
 
 ## Screenshot 📸
 
-Login - https://discordmod.club/H6OESQm7
+Login - https://discordmod.club/H6OESQm7<br />
 Register - https://discordmod.club/DWUaHnXB <br />
-Home - https://discordmod.club/dxJipFX4
-Dashboard - https://discordmod.club/Ejb08gvH
-Documentation - https://discordmod.club/c5AsCL8s<br />
+Home - https://discordmod.club/dxJipFX4 <br />
+Dashboard - https://discordmod.club/Ejb08gvH <br />
+Documentation - https://discordmod.club/c5AsCL8s <br />
 
 ## License 🚀️
 
