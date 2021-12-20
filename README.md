@@ -25,8 +25,9 @@ Live App: https://liaauth.herokuapp.com/
 
 Sample Project (C++): [https://www.mediafire.com/file/iwv69l7edax2zjg/LiaAuth_SampleProject.zip/file](https://www.mediafire.com/file/iwv69l7edax2zjg/LiaAuth_SampleProject.zip/file)
 
-## Login - https://discordmod.club/H6OESQm7Screenshot 📸
+## Screenshot 📸
 
+Login - https://discordmod.club/H6OESQm7
 Register - https://discordmod.club/DWUaHnXB <br />
 Home - https://discordmod.club/dxJipFX4
 Dashboard - https://discordmod.club/Ejb08gvH
