@@ -21,7 +21,6 @@ Live App: https://liaauth.herokuapp.com/
 |   | project: String | 403: "Key is already used by another user" |
 |   | license: String | 403: "Project not found" |
 |   |   | 200: "License OK" |
-|   |   |   |
 
 Sample Project (C++): [https://www.mediafire.com/file/iwv69l7edax2zjg/LiaAuth_SampleProject.zip/file](https://www.mediafire.com/file/iwv69l7edax2zjg/LiaAuth_SampleProject.zip/file)
 
