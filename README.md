@@ -17,7 +17,7 @@ Live App: https://liaauth.herokuapp.com/
 
 | URI | DATA | RESPONSE |
 | - | - | - |
-| /api/public/checklicense | email: String<br /><br /> | 404: "License not found on project" |
+| /api/public/checklicense | email: String | 404: "License not found on project" |
 |   | project: String | 403: "Key is already used by another user" |
 |   | license: String | 403: "Project not found" |
 |   |   | 200: "License OK" |
